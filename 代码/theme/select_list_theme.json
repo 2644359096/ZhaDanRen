@@ -1,0 +1,76 @@
+{
+     "selection_list":
+     {
+         "colours":
+         {
+             "dark_bg":"rgba(155,155,200,200)",
+             "normal_border": "rgba(0,0,0,255)"
+         },
+         "misc":
+         {
+             "shape": "rectangle",
+             "shape_corner_radius": "10",
+             "border_width": "1",
+             "shadow_width": "15",
+             "list_item_height": "80"
+         }
+     },
+		 "selection_list.@selection_list_item":
+		 {
+			 "colours":
+			 {
+				  "normal_bg": "rgb(140,120,90)",
+				  "hovered_bg": "rgb(80,60,80)",
+				  "disabled_bg": "rgb(60,90,150)",
+				  "selected_bg": "rgb(20,90,40)"
+			  },
+			 "misc":
+			   {
+				  "border_width": "3"
+			   },
+			 "font":
+			 {
+				  "name": "default_font",
+				  "size": "30",
+				  "bold": "0",
+				  "italic": "1",
+				  "regular_resource":
+				  {
+					  "package": "游戏素材.字体",
+					  "resource": "腾祥金砖黑简.ttf"
+				  }
+			 }
+		 },
+  		"selection_list.vertical_scroll_bar":
+		{
+		  "colours":
+		   {
+			   "dark_bg":"rgba(155,155,200,200)",
+			   "normal_border": "rgba(0,0,0,255)"
+		   },
+		  "misc":
+		   {
+			  "shape": "rectangle",
+			  "border_width": "3",
+			  "enable_arrow_buttons": "1"
+		   }
+		},
+  		"selection_list.vertical_scroll_bar.button":
+		{
+		  "colours":
+			 {
+				  "normal_bg": "rgb(155,120,20)",
+				  "hovered_bg": "rgb(100,60,80)",
+				  "disabled_bg": "rgb(60,90,150)",
+				  "selected_bg": "rgb(20,90,40)"
+			  },
+			 "misc":
+			   {
+				  "border_width": "3"
+			   }
+			 
+		}
+		
+  		
+		
+}

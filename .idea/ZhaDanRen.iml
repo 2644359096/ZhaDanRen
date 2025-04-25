@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module type="PYTHON_MODULE" version="4">
+  <component name="NewModuleRootManager">
+    <content url="file://$MODULE_DIR$">
+      <excludeFolder url="file://$MODULE_DIR$/.venv" />
+    </content>
+    <orderEntry type="jdk" jdkName="Python 3.10 (ZhaDanRen)" jdkType="Python SDK" />
+    <orderEntry type="sourceFolder" forTests="false" />
+  </component>
+  <component name="PyNamespacePackagesService">
+    <option name="namespacePackageFolders">
+      <list>
+        <option value="$MODULE_DIR$/游戏素材/ui/开始界面/按钮/关于" />
+        <option value="$MODULE_DIR$/游戏素材/ui/开始界面/按钮/开始" />
+        <option value="$MODULE_DIR$/游戏素材/ui/开始界面/按钮/设置" />
+        <option value="$MODULE_DIR$/游戏素材/ui/开始界面/按钮/退出" />
+        <option value="$MODULE_DIR$/游戏素材/ui/开始界面" />
+      </list>
+    </option>
+  </component>
+</module>

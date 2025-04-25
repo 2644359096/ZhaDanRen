@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="JsonSchemaMappingsProjectConfiguration">
+    <state>
+      <map>
+        <entry key="pygame_gui_theme">
+          <value>
+            <SchemaInfo>
+              <option name="generatedName" value="新建架构" />
+              <option name="name" value="pygame_gui_theme" />
+              <option name="relativePathToSchema" value="$APPLICATION_HOME_DIR$/pygame_gui_theme/button.json" />
+              <option name="schemaVersion" value="JSON 架构 202,012" />
+            </SchemaInfo>
+          </value>
+        </entry>
+      </map>
+    </state>
+  </component>
+</project>

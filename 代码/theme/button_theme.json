@@ -1,0 +1,121 @@
+{
+  "button":{
+	"colours": {
+	  "normal_bg": "rgb(40,100,180)",
+	  "hovered_bg": "rgb(80,155,160)",
+	  "disabled_bg": "rgb(60,90,150)",
+	  "selected_bg": "rgb(20,30,40)"
+	},
+	"font": {
+	  "name": "default_font",
+	  "size": "20",
+	  "bold": "0",
+	  "italic": "1",
+	  "regular_resource": {
+		"package": "游戏素材.字体",
+		"resource": "腾祥金砖黑简.ttf"
+	  }
+	}
+  },
+  "@start_buttons": {
+	"colours": {
+	  "normal_bg": "rgba(0,0,0,0)",
+	  "hovered_bg": "rgba(0,0,0,0)",
+	  "disabled_bg": "rgba(0,0,0,0)",
+	  "selected_bg": "rgba(0,0,0,0)",
+	  "active_bg":"rgba(0,0,0,0)",
+	  "normal_border": "rgba(0,0,0,0)",
+	  "hovered_border": "rgba(0,0,0,0)",
+	  "disabled_border": "rgba(0,0,0,0)",
+	  "selected_border": "rgba(0,0,0,0)",
+	  "active_border":"rgba(0,0,0,0)"
+	},
+	
+	"misc": {
+	  "shape": "rounded_rectangle",
+	  "border_width": 0,
+	  "shadow_width": 0
+	}
+	
+  },
+  "#start_game_button": {
+	"images":{
+	  "normal_image":{
+		"package": "游戏素材.ui.开始界面.按钮.开始",
+		"resource": "按钮_常规状态.png"
+	  },
+	  "hovered_image": {
+		"package": "游戏素材.ui.开始界面.按钮.开始",
+		"resource": "按钮_悬停状态.png"
+	  },
+	  "selected_image": {
+		"package": "游戏素材.ui.开始界面.按钮.开始",
+		"resource": "按钮_焦点状态.png"
+	  },
+	  "disabled_image":{
+		"package": "游戏素材.ui.开始界面.按钮.开始",
+		"resource": "按钮_禁用状态.png"
+	  }
+	}
+  },
+  "#setting_button": {
+	"images":{
+	  "normal_image":{
+		"package": "游戏素材.ui.开始界面.按钮.设置",
+		"resource": "按钮_常规状态.png"
+	  },
+	  "hovered_image": {
+		"package": "游戏素材.ui.开始界面.按钮.设置",
+		"resource": "按钮_悬停状态.png"
+	  },
+	  "selected_image": {
+		"package": "游戏素材.ui.开始界面.按钮.设置",
+		"resource": "按钮_焦点状态.png"
+	  },
+	  "disabled_image":{
+		"package": "游戏素材.ui.开始界面.按钮.设置",
+		"resource": "按钮_禁用状态.png"
+	  }
+	}
+  },
+  "#about_us_button":{
+  	"images":{
+	  "normal_image":{
+		"package": "游戏素材.ui.开始界面.按钮.关于",
+		"resource": "按钮_常规状态.png"
+	  	},
+	  "hovered_image": {
+		"package": "游戏素材.ui.开始界面.按钮.关于",
+		"resource": "按钮_悬停状态.png"
+	  },
+	  "selected_image": {
+		"package": "游戏素材.ui.开始界面.按钮.关于",
+		"resource": "按钮_焦点状态.png"
+	  },
+	  "disabled_image":{
+		"package": "游戏素材.ui.开始界面.按钮.关于",
+		"resource": "按钮_禁用状态.png"
+	  }
+	}
+  },
+  "#exit_game_button":{
+  	"images":{
+	  "normal_image":{
+		"package": "游戏素材.ui.开始界面.按钮.退出",
+		"resource": "按钮_常规状态.png"
+	  },
+	  "hovered_image": {
+		"package": "游戏素材.ui.开始界面.按钮.退出",
+		"resource": "按钮_悬停状态.png"
+	  },
+	  "selected_image": {
+		"package": "游戏素材.ui.开始界面.按钮.退出",
+		"resource": "按钮_焦点状态.png"
+	  },
+	  "disabled_image":{
+		"package": "游戏素材.ui.开始界面.按钮.退出",
+		"resource": "按钮_禁用状态.png"
+	  }
+	}
+  }
+}

@@ -1,0 +1,41 @@
+{
+  "label":{
+	"font": {
+      "name": "kaiti",
+	  "size": "20"
+    }
+  },
+  "@main_labels":{
+	"colours":
+         {
+             "dark_bg":"rgba(0,0,0,0)" ,
+             "normal_text": "rgba(255,0,0,255),rgba(0,255,0,255),rgba(0,0,255,255),90",
+             "text_shadow": "rgba(255,200,0,250)"
+         },
+	"font": {
+      "name": "xiukai",
+	  "size": "40",
+	  "bold":"1",
+	  "regular_resource": {
+		"package": "游戏素材.字体",
+		"resource": "方正宋刻本秀楷简体.ttf"
+	  }
+    },
+	"misc": {
+	  "text_shadow_size": "1"
+	}
+	
+  },
+  "#top_label": {
+	"font": {
+      "name": "jinzhuan",
+	  "size": "80",
+	  "bold":"2",
+	  "regular_resource": {
+		"package": "游戏素材.字体",
+		"resource": "腾祥金砖黑简.ttf"
+	  }
+    }
+  }
+  
+}
