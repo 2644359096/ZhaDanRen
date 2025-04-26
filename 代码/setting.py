@@ -1,4 +1,4 @@
-from support import *
+from .support import *
 import pygame
 
 
@@ -35,7 +35,7 @@ ZOU='走'
 PROPS={
     'add HP':{
         'type': 'buff',
-        'frames':import_folder('../游戏素材/道具/恢复'),
+        'frames':import_folder('./游戏素材/道具/恢复'),
         'existence time': 7000,
         'effect':{
             'add value': 1,
@@ -43,7 +43,7 @@ PROPS={
     },
     'add bomb num':{
         'type': 'buff',
-        'frames':import_folder('../游戏素材/道具/炸弹数量'),
+        'frames':import_folder('./游戏素材/道具/炸弹数量'),
         'existence time': 7000,
         'effect':{
             'add value': 1,
@@ -51,7 +51,7 @@ PROPS={
     },
     'add  speed':{
         'type': 'buff',
-        'frames':import_folder('../游戏素材/道具/移速'),
+        'frames':import_folder('./游戏素材/道具/移速'),
         'existence time': 7000,
         'effect':{
             'add value': 30,
@@ -59,7 +59,7 @@ PROPS={
     },
     'uncheckable':{
         'type': 'persistent',
-        'frames':import_folder('../游戏素材/道具/无敌'),
+        'frames':import_folder('./游戏素材/道具/无敌'),
         'existence time': 7000,
         'uncheckable time': 10000,
         'effect':{
@@ -68,7 +68,7 @@ PROPS={
     },
     'add explosion range':{
         'type': 'buff',
-        'frames':import_folder('../游戏素材/道具/炸弹范围'),
+        'frames':import_folder('./游戏素材/道具/炸弹范围'),
         'existence time': 7000,
         'effect':{
             'add value': 1,
@@ -76,7 +76,7 @@ PROPS={
     },
     'Controllable bomb':{
         'type': 'special',
-        'frames':import_folder('../游戏素材/道具/遥控炸弹/遥控炸弹控制器'),
+        'frames':import_folder('./游戏素材/道具/遥控炸弹/遥控炸弹控制器'),
         'existence time': 7000,
         'effect':{
             'controllable status':True

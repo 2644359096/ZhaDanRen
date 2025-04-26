@@ -1,6 +1,6 @@
 import  pygame
-from setting import *
-from generic  import  BaseProp
+from .setting import *
+from .generic  import  BaseProp
 
 class BombNumProp(BaseProp):
     def __init__(self ,pos, groups ,gmap ,z=LAYERS['主层']):

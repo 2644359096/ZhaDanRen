@@ -1,7 +1,7 @@
 import pygame
-from setting import *
 from pygame.sprite import Group
-from support import *
+from .setting import *
+from .support import *
 
 
 class GameMaps():

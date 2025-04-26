@@ -1,12 +1,12 @@
 import pygame,random
-from setting import *
-from support import *
 from queue import PriorityQueue
-from props import *
-from player import Player
-from sprites import PathLine
-from gamemaps import GameMap
-from game_timer import Timer
+from .setting import *
+from .support import *
+from .props import *
+from .player import Player
+from .sprites import PathLine
+from .gamemaps import GameMap
+from .game_timer import Timer
 
 
 class Enemy(Player):
@@ -55,7 +55,7 @@ class Enemy(Player):
             if self.current_action:
                 if self.current_pos:
                     # 走完当前节点才能转弯
-                    if is_range_equal((3,3),  self.rect.topleft, self.current_pos):
+                    if is_range_equal((2,2),  self.rect.topleft, self.current_pos):
                         self.current_direction = self.current_action
                         self.direction.xy=self.__get_action_delta(self.current_direction)
             super().move(dt)
@@ -157,7 +157,7 @@ class Enemy(Player):
         if not paths:
             return
         for direction,path in zip(self.get_direction(paths),paths[1:-1]):
-            PathLine(self.gmap.conversion_pos(path,PIXELPOS),'../游戏素材/ui/主界面/箭头样式',direction,[self.group,self.path_sprites],self.gmap,map_elemenl=ROAD,z=LAYERS['上层'])
+            PathLine(self.gmap.conversion_pos(path,PIXELPOS),'./游戏素材/ui/主界面/箭头样式',direction,[self.group,self.path_sprites],self.gmap,map_elemenl=ROAD,z=LAYERS['上层'])
     @staticmethod
     def get_direction(paths):
         directions = []

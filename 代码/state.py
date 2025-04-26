@@ -1,7 +1,7 @@
 import pygame
 from queue import Queue
-from generic import BaseUIState,BaseEnemyState
-from game_core_ui import *
+from .generic import BaseUIState,BaseEnemyState
+from .game_core_ui import *
 
 class StateMachine:
     """状态机"""
@@ -142,7 +142,7 @@ class MainUIState(BaseUIState):
         for role in role_list:
             # 根据角色映射字典，值为缩略图矩形，缩略图图像
             role_thumbnail_rects[role] = pygame.Rect(default_thumbnail_rect), pygame.transform.scale(
-                pygame.image.load(f'../游戏素材/人物/人物行为/{role}/下_站/{role}_站_下_01.png'),
+                pygame.image.load(f'./游戏素材/人物/人物行为/{role}/下_站/{role}_站_下_01.png'),
                 (default_swipes_container_rect.width // 3, default_swipes_container_rect.height))
             # 每隔一个缩略图增加半个个身位距离150*4
             default_thumbnail_rect.x += default_thumbnail_rect.width * 1.5

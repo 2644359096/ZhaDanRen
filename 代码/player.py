@@ -1,10 +1,10 @@
 import pygame
-from setting import *
-from support import *
-from props import *
-from sprites import Bomb,UncheckableShield,ControllableBomb
-from gamemaps import GameMap
-from game_timer import Timer,KeyTimer
+from .setting import *
+from .support import *
+from .props import *
+from .sprites import Bomb,UncheckableShield,ControllableBomb
+from .gamemaps import GameMap
+from .game_timer import Timer,KeyTimer
 
 
 class Player(pygame.sprite.Sprite):
@@ -36,11 +36,11 @@ class Player(pygame.sprite.Sprite):
         }
 
 
-        self.blood_volume=10
-        self.bomb_num=4
+        self.blood_volume=1
+        self.bomb_num=1
         self.bomb_max_num=self.bomb_num
         self.bomb_atk=1
-        self.explosion_range=5
+        self.explosion_range=1
 
         self.uncheckable_status=False
 
@@ -71,9 +71,9 @@ class Player(pygame.sprite.Sprite):
         }
         for animation in self.animations.keys():
             if animation == DEAD:
-                full_path = '../游戏素材/人物/人物状态/死亡'
+                full_path = './游戏素材/人物/人物状态/死亡'
             else:
-                full_path='../游戏素材/人物/人物行为/'+role+'/'+animation
+                full_path='./游戏素材/人物/人物行为/'+role+'/'+animation
             self.animations[animation]=import_folder(full_path)
     def animate(self,dt):
         if self.status==DEAD:

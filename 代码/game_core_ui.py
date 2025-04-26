@@ -1,12 +1,13 @@
 import pygame
 from pygame import Event
-
-from generic import BaseContainer
-from setting import *
 from pygame_gui._constants import UI_BUTTON_PRESSED,UI_SELECTION_LIST_NEW_SELECTION
 from pygame_gui.core import ObjectID, UIContainer
-from game_tools_ui import RollingDisplayContainers,GameThumbnail,GameDynamicDiagrams,SelectMapListTool
 from pygame_gui.elements import UIImage, UIButton, UILabel, UISelectionList
+
+from .generic import BaseContainer
+from .setting import *
+
+from .game_tools_ui import RollingDisplayContainers,GameThumbnail,GameDynamicDiagrams,SelectMapListTool
 
 
 #开始界面
@@ -60,13 +61,13 @@ class MainWindow(BaseContainer):
     def __init__(self, relative_rect,manager,layout):
         self.smlt=SelectMapListTool(GMAPS)
         map_element_images={
-            ROAD:'../游戏素材/路',
-            UNBREAKABLEWALL:'../游戏素材/墙/不可破坏墙',
-            BREAKABLEWALL:'../游戏素材/墙/可破坏墙',
-            PLAYER1:'../游戏素材/ui/主界面/箭头样式',
-            PLAYER2:'../游戏素材/ui/主界面/箭头样式',
-            PLAYER3:'../游戏素材/ui/主界面/箭头样式',
-            PLAYER4:'../游戏素材/ui/主界面/箭头样式',
+            ROAD:'./游戏素材/路',
+            UNBREAKABLEWALL:'./游戏素材/墙/不可破坏墙',
+            BREAKABLEWALL:'./游戏素材/墙/可破坏墙',
+            PLAYER1:'./游戏素材/ui/主界面/箭头样式',
+            PLAYER2:'./游戏素材/ui/主界面/箭头样式',
+            PLAYER3:'./游戏素材/ui/主界面/箭头样式',
+            PLAYER4:'./游戏素材/ui/主界面/箭头样式',
         }
         self.smlt.load_maps(map_element_images)
         super().__init__(relative_rect, manager,layout)
@@ -119,7 +120,7 @@ class MainWindow(BaseContainer):
                 parent_element=self
             )
         # 用于动态图插入
-        self.animate_frames=import_frames(f'../游戏素材/人物/人物行为/{self.swipes_container.get_current_element().thumbnail_name}/')
+        self.animate_frames=import_frames(f'./游戏素材/人物/人物行为/{self.swipes_container.get_current_element().thumbnail_name}/')
 
         # 大型动态图，用于展示角色
         self.large_dynamic_diagrams = GameDynamicDiagrams(
@@ -236,7 +237,7 @@ class MainWindow(BaseContainer):
             list(map(lambda twice_button: twice_button.enable(), self.twice_buttons.values()))
     def update(self, time_delta: float):
         super().update(time_delta)
-        self.large_dynamic_diagrams.set_animate_frames(import_frames(f'../游戏素材/人物/人物行为/{self.swipes_container.get_current_element().thumbnail_name}/'))
+        self.large_dynamic_diagrams.set_animate_frames(import_frames(f'./游戏素材/人物/人物行为/{self.swipes_container.get_current_element().thumbnail_name}/'))
 
 #设置界面
 class SettingContainer(BaseContainer):

@@ -2,12 +2,12 @@ import random
 
 import pygame
 from pygame.locals import *
-from setting import *
-from player import Player
-from sprites import *
-from support import *
-from gamemaps import GameMaps,PixleMap
-from enemy import Enemy
+from .setting import *
+from .player import Player
+from .sprites import *
+from .support import *
+from .gamemaps import GameMaps,PixleMap
+from .enemy import Enemy
 class Level():
     def __init__(self,game_info:dict):
         self.display_surface=None
@@ -23,14 +23,14 @@ class Level():
 
         # 路
         for map_elemenl,pixle_pos in self.map_elemenl_and_pixle_pos_list:
-            MapBlock(pixle_pos, '../游戏素材/路', self.pixle_map_sprites, self.gmap, ROAD, z=LAYERS['底层'])
+            MapBlock(pixle_pos, './游戏素材/路', self.pixle_map_sprites, self.gmap, ROAD, z=LAYERS['底层'])
         # 墙
             if map_elemenl==UNBREAKABLEWALL:
-                MapBlock(pixle_pos, '../游戏素材/墙/不可破坏墙', [self.pixle_map_sprites, self.collision_sprites], self.gmap, UNBREAKABLEWALL, z=LAYERS['主层'])
+                MapBlock(pixle_pos, './游戏素材/墙/不可破坏墙', [self.pixle_map_sprites, self.collision_sprites], self.gmap, UNBREAKABLEWALL, z=LAYERS['主层'])
 
         #障碍物
             if map_elemenl==BREAKABLEWALL:
-                MapBlock(pixle_pos, '../游戏素材/墙/可破坏墙', [self.pixle_map_sprites, self.collision_sprites], self.gmap, BREAKABLEWALL, z=LAYERS['主层'])
+                MapBlock(pixle_pos, './游戏素材/墙/可破坏墙', [self.pixle_map_sprites, self.collision_sprites], self.gmap, BREAKABLEWALL, z=LAYERS['主层'])
         #玩家出生点
             if map_elemenl in [PLAYER1,PLAYER2,PLAYER3,PLAYER4]:
                 self.player_initial_point.record_point(map_elemenl,pixle_pos)

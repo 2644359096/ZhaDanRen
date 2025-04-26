@@ -3,7 +3,7 @@ from os import listdir,walk
 import pygame
 from pygame_gui import UI_BUTTON_PRESSED
 
-from game_timer import Timer
+from .game_timer import Timer
 
 def import_folder(path):
     surface_list = []

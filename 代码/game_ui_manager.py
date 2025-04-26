@@ -1,10 +1,11 @@
-import pygame, pygame_gui
-from pygame.locals import *
-from setting import *
-from state import *
+import pygame
 from pygame_gui import UIManager
 from pygame_gui.core import UIContainer
-from game_core_ui import StartWindow,MainWindow,GameWindow
+from pygame.locals import *
+from .setting import *
+from .state import *
+
+
 
 
 
@@ -22,7 +23,7 @@ class GameUIManager(object):
 
     def state_machine_start(self):
         ui_state_configs = {
-            'start': (StartUIState, (self.display_surface, self.manager, pygame.image.load('../游戏素材/ui/开始界面/标题/标题.png'),)),
+            'start': (StartUIState, (self.display_surface, self.manager, pygame.image.load('./游戏素材/ui/开始界面/标题/标题.png'),)),
             'main': (MainUIState, (self.display_surface, self.manager, ['蓝', '绿', '草', '紫'])),
             'game':(GameUIState,(self.display_surface,self.manager,self.game))
         }

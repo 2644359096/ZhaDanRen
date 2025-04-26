@@ -3,14 +3,15 @@ import pygame
 import typing
 import random
 from typing import Union, Dict, Tuple, Optional, List, Iterator
-from pygame.locals import  *
-from setting import *
-from gamemaps import GameMaps
-from game_timer import Timer
-from support import  DoubleClick
 from pygame_gui.core.interfaces import IContainerLikeInterface, IUIElementInterface, IUIContainerInterface,IUIManagerInterface
 from pygame_gui.core import UIContainer,ObjectID,UIElement
 from pygame_gui.elements import  UIImage
+from pygame.locals import  *
+from .setting import *
+from .gamemaps import GameMaps
+from .game_timer import Timer
+from .support import  DoubleClick
+
 
 
 
@@ -39,8 +40,8 @@ class RollingDisplayContainers(UIContainer):
         self.locked_element=None
         self.unlock_lost_timer=Timer(2000)
         self.lock_surfaces={
-            'lock':pygame.transform.scale(pygame.image.load('../游戏素材/ui/主界面/锁/锁定.png'), (ELEMENT_RECT_WIGHT/3,ELEMENT_RECT_HEIGHT/3)).convert_alpha(),
-            'unlock':pygame.transform.scale(pygame.image.load('../游戏素材/ui/主界面/锁/解锁.png'), (ELEMENT_RECT_WIGHT/3,ELEMENT_RECT_HEIGHT/3)).convert_alpha()
+            'lock':pygame.transform.scale(pygame.image.load('./游戏素材/ui/主界面/锁/锁定.png'), (ELEMENT_RECT_WIGHT/3,ELEMENT_RECT_HEIGHT/3)).convert_alpha(),
+            'unlock':pygame.transform.scale(pygame.image.load('./游戏素材/ui/主界面/锁/解锁.png'), (ELEMENT_RECT_WIGHT/3,ELEMENT_RECT_HEIGHT/3)).convert_alpha()
         }
 
         self.double_click_mouse=DoubleClick(DoubleClick.MOUSE,BUTTON_LEFT)

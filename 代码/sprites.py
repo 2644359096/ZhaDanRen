@@ -1,10 +1,10 @@
 import pygame
 import random
-from setting import *
-from generic import Generic
-from gamemaps import GameMap
-from props import *
-from support import import_folder, GameObjectFactory
+from .setting import *
+from .generic import Generic
+from .gamemaps import GameMap
+from .props import *
+from .support import import_folder, GameObjectFactory
 
 prop_factory = GameObjectFactory([HP, BOMBNUM, EXPLOSIONRANGE, SPEED, UNCHECKABLE, CONTROLLABLEBOMB],
                                  [HPProp, BombNumProp, ExplosionRangeProp, SpeedProp, UncheckableProp,
@@ -69,12 +69,12 @@ class Bomb(Generic):
     def __init__(self, player, explosion_range, pos, group:GameMap, collosion_sprites, gmap,
                  z=LAYERS['主层']):
         self.frame_index = 0
-        self.frames = import_folder('../游戏素材/炸弹/炸弹')
+        self.frames = import_folder('./游戏素材/炸弹/炸弹')
         self.player = player
         self.map_elemenl = BOMB
         super().__init__(pos, self.frames[int(self.frame_index)], group, gmap, self.map_elemenl, z)
         self.explosion_range = explosion_range
-        self.explosion_range_surfaces = import_folder('../游戏素材/炸弹/炸弹范围')
+        self.explosion_range_surfaces = import_folder('./游戏素材/炸弹/炸弹范围')
         self.explosion_start = False
         self.exploding = False
         self.explosion_end = False
@@ -144,10 +144,10 @@ class Bomb(Generic):
 class ControllableBomb(Bomb):
     def __init__(self, player, explosion_range, pos, group, collosion_sprites, gmap: GameMap, z=LAYERS['主层']):
         super().__init__(player, explosion_range, pos, group, collosion_sprites, gmap, z)
-        self.standby_frames = import_folder('../游戏素材/炸弹/遥控炸弹/待命中')
-        self.explosion_frames = import_folder('../游戏素材/炸弹/遥控炸弹/接收信号')
+        self.standby_frames = import_folder('./游戏素材/炸弹/遥控炸弹/待命中')
+        self.explosion_frames = import_folder('./游戏素材/炸弹/遥控炸弹/接收信号')
         self.frames = self.standby_frames
-        self.explosion_range_surfaces = import_folder('../游戏素材/炸弹/遥控炸弹范围')
+        self.explosion_range_surfaces = import_folder('./游戏素材/炸弹/遥控炸弹范围')
         self.explosion_status=False
 
     def animate(self, dt):
@@ -213,8 +213,8 @@ class UncheckableShield(pygame.sprite.Sprite):
         self.start_frame_index = 0
         self.end_frame_index = 0
         self.prop_type = UNCHECKABLE
-        self.start_frames = import_folder('../游戏素材/人物/人物状态/无敌/开始')
-        self.end_frames = import_folder('../游戏素材/人物/人物状态/无敌/结束')
+        self.start_frames = import_folder('./游戏素材/人物/人物状态/无敌/开始')
+        self.end_frames = import_folder('./游戏素材/人物/人物状态/无敌/结束')
         self.frames = self.start_frames
         self.image = pygame.transform.scale(self.frames[int(self.frame_index)],
                                             (PIXELSIZE + 5, PIXELSIZE + 10)).convert_alpha()

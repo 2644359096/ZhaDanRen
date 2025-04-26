@@ -1,20 +1,28 @@
 import sys
 import pygame
-import pygame_gui
 from pygame.locals import *
-from setting import *
-from level import Level
-from game_core_ui import GameWindow
-from game_ui_manager import GameUIManager
+from 代码.setting import *
+from 代码.level import Level
+from 代码.game_core_ui import GameWindow
+from 代码.game_ui_manager import GameUIManager
+import os
+
+# 确保当前工作目录为项目根目录
+
+PROJECT_ROOT = os.path.dirname(os.path.abspath(__file__))
+sys.path.append(os.path.join(PROJECT_ROOT, "代码"))
+os.chdir(PROJECT_ROOT)
+
+
 class Game:
     def __init__(self):
         pygame.init()
         self.screen = pygame.display.set_mode((SCREENWIDTH, SCREENHEIGHT),DOUBLEBUF)
         pygame.display.set_caption('炸弹人')
         self.clock=pygame.time.Clock()
-        self.manager=GameUIManager(self.screen,Level,'./theme/button_theme.json')
-        self.manager.load_theme('./theme/label_theme.json')
-        self.manager.load_theme('./theme/select_list_theme.json')
+        self.manager=GameUIManager(self.screen,Level,'./代码/theme/button_theme.json')
+        self.manager.load_theme('./代码/theme/label_theme.json')
+        self.manager.load_theme('./代码/theme/select_list_theme.json')
 
         self.manager.state_machine_start()
         # self.manager.init_main_window(roles)

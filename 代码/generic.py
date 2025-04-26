@@ -1,6 +1,6 @@
 import pygame
-from setting import *
-from gamemaps import GameMap
+from .setting import *
+from .gamemaps import GameMap
 from pygame_gui.core import UIContainer
 from pygame_gui.elements import  UIImage
 
@@ -29,7 +29,7 @@ class BaseProp(Generic):
     def __init__(self, pos, prop_name, groups, gmap: GameMap, z=LAYERS['主层']):
         self.prop = PROPS[prop_name]
         self.frames = self.prop['frames']
-        self.picked_frames = import_folder('../游戏素材/道具/被拾取')
+        self.picked_frames = import_folder('./游戏素材/道具/被拾取')
         self.picked_status = False
         self.frame_index = 0
         self.map_elemenl = PROP
